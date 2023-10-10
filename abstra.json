@@ -8,7 +8,7 @@
         "name": "Data Ingestion",
         "path": "ingest",
         "type": "form",
-        "visible": false
+        "visible": true
       },
       {
         "id": "watch",
@@ -22,7 +22,7 @@
         "name": "Admin",
         "path": "admin",
         "type": "form",
-        "visible": false
+        "visible": true
       }
     ],
     "root": null,
@@ -68,7 +68,7 @@
       "id": "watch",
       "path": "watch",
       "title": "Watch Data Processing",
-      "auto_start": false,
+      "auto_start": true,
       "allow_restart": false,
       "end_message": null,
       "start_message": null,

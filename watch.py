@@ -24,7 +24,7 @@ ingestion = apis.get_ingestion_by_id(ingestion_id)
 while ingestion["status"] != "done":
     total = ingestion["total"]
     progress = ingestion["progress"]
-    af.Page().display_markdown(f"Progress: {progress}/{total}").display_progress(progress, total).run()
+    af.display_progress(progress, total, text=f"Progress: {progress}/{total}")
     time.sleep(2)
     ingestion = apis.get_ingestion_by_id(ingestion_id)
 

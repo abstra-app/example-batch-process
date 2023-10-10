@@ -47,6 +47,7 @@ def create_ingestion(id: str, user: str, total: int, tags) -> str:
         },
     )
 
+
 def get_ingestion_by_id(ingestion_id: str) -> dict:
     return at.run(f"SELECT * FROM ingestions WHERE id = $1", [ingestion_id])[0]
 
@@ -57,6 +58,7 @@ def update_ingestion_running(ingestion_id: str) -> None:
 
 def update_ingestion_done(ingestion_id: str) -> None:
     at.update_by_id("ingestions", ingestion_id, {"status": "done"})
+
 
 def update_ingestion_progress(ingestion_id: str, progress: int) -> None:
     at.update_by_id("ingestions", ingestion_id, {"progress": progress})

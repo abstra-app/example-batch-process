@@ -18,9 +18,11 @@ ingestion_id = str(uuid.uuid4())
 # Request the CSV with the CPFs to be validated
 result = (
     af.Page()
+    .display_markdown(
+        f"## Upload File for async processing.    \n```ref id: {ingestion_id}```"
+    )
     .read_file("Upload CSV", key="csv")
     .read_tag("Tags", multiple=True, key="tags")
-    .display_markdown(f"```ref id: {ingestion_id}```")
     .run()
 )
 
