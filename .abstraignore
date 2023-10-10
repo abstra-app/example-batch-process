@@ -5,3 +5,4 @@
 __pycache__
 .env
 __tests
+example_cpfs.csv
