@@ -2,7 +2,29 @@
   "version": "0.1",
   "workspace": {
     "name": "Untitled Workspace",
-    "sidebar": [],
+    "sidebar": [
+      {
+        "id": "ingest",
+        "name": "Data Ingestion",
+        "path": "ingest",
+        "type": "form",
+        "visible": false
+      },
+      {
+        "id": "watch",
+        "name": "Watch Data Processing",
+        "path": "watch",
+        "type": "form",
+        "visible": false
+      },
+      {
+        "id": "admin",
+        "name": "Admin",
+        "path": "admin",
+        "type": "form",
+        "visible": false
+      }
+    ],
     "root": null,
     "theme": null,
     "logo_url": null,
@@ -13,7 +35,90 @@
   },
   "jobs": [],
   "hooks": [],
-  "forms": [],
+  "forms": [
+    {
+      "id": "ingest",
+      "path": "ingest",
+      "title": "Data Ingestion",
+      "auto_start": false,
+      "allow_restart": true,
+      "end_message": null,
+      "start_message": null,
+      "error_message": null,
+      "welcome_title": null,
+      "timeout_message": null,
+      "start_button_text": null,
+      "restart_button_text": null,
+      "is_initial": true,
+      "file": "ingest.py",
+      "workflow_position": [
+        447.6377952755905,
+        218.45669291338584
+      ],
+      "transitions": [
+        {
+          "target_path": "yr0lb4d0ohl",
+          "target_type": "scripts",
+          "label": "",
+          "id": "svgad4t8j79"
+        }
+      ]
+    },
+    {
+      "id": "watch",
+      "path": "watch",
+      "title": "Watch Data Processing",
+      "auto_start": false,
+      "allow_restart": false,
+      "end_message": null,
+      "start_message": null,
+      "error_message": null,
+      "welcome_title": null,
+      "timeout_message": null,
+      "start_button_text": null,
+      "restart_button_text": null,
+      "is_initial": true,
+      "file": "watch.py",
+      "workflow_position": [
+        487.61417322834654,
+        353.62204724409446
+      ],
+      "transitions": []
+    },
+    {
+      "id": "admin",
+      "path": "admin",
+      "title": "Admin",
+      "auto_start": false,
+      "allow_restart": false,
+      "end_message": null,
+      "start_message": null,
+      "error_message": null,
+      "welcome_title": null,
+      "timeout_message": null,
+      "start_button_text": null,
+      "restart_button_text": null,
+      "is_initial": true,
+      "file": "admin.py",
+      "workflow_position": [
+        0,
+        0
+      ],
+      "transitions": []
+    }
+  ],
   "dashes": [],
-  "scripts": []
+  "scripts": [
+    {
+      "id": "yr0lb4d0ohl",
+      "file": "process.py",
+      "path": "yr0lb4d0ohl",
+      "title": "Process Data",
+      "workflow_position": [
+        749,
+        222
+      ],
+      "transitions": []
+    }
+  ]
 }
