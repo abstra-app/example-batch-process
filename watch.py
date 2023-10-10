@@ -30,4 +30,4 @@ while ingestion["status"] != "done":
 
 
 total = ingestion["total"]
-af.Page().display_markdown(f"## Done!   \n### Processed: {total}").run()
+af.Page().display_markdown(f"## Done!   \n### Processed: {total}").run(end_program=True)
